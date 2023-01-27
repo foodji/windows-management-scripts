@@ -138,29 +138,29 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
         "Microsoft.GetHelp"
         "Microsoft.Getstarted"
         "Microsoft.Messaging"
-        "Microsoft.Microsoft3DViewer"
-        "Microsoft.MicrosoftOfficeHub"
+        #"Microsoft.Microsoft3DViewer"
+        #"Microsoft.MicrosoftOfficeHub"
         "Microsoft.MicrosoftSolitaireCollection"
-        "Microsoft.NetworkSpeedTest"
+        #"Microsoft.NetworkSpeedTest"
         "Microsoft.MixedReality.Portal"
-        "Microsoft.News"
-        "Microsoft.Office.Lens"
-        "Microsoft.Office.OneNote"
-        "Microsoft.Office.Sway"
+        #"Microsoft.News"
+        #"Microsoft.Office.Lens"
+        #"Microsoft.Office.OneNote"
+        #"Microsoft.Office.Sway"
         "Microsoft.OneConnect"
         "Microsoft.People"
         "Microsoft.Print3D"
-        "Microsoft.RemoteDesktop"
+        #"Microsoft.RemoteDesktop"
         "Microsoft.SkypeApp"
-        "Microsoft.StorePurchaseApp"
-        "Microsoft.Office.Todo.List"
-        "Microsoft.Whiteboard"
-        "Microsoft.WindowsAlarms"
+        #"Microsoft.StorePurchaseApp"
+        #"Microsoft.Office.Todo.List"
+        #"Microsoft.Whiteboard"
+        #"Microsoft.WindowsAlarms"
         #"Microsoft.WindowsCamera"
         "microsoft.windowscommunicationsapps"
         "Microsoft.WindowsFeedbackHub"
         "Microsoft.WindowsMaps"
-        "Microsoft.WindowsSoundRecorder"
+        #"Microsoft.WindowsSoundRecorder"
         "Microsoft.Xbox.TCUI"
         "Microsoft.XboxApp"
         "Microsoft.XboxGameOverlay"
@@ -168,11 +168,11 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
         "Microsoft.XboxSpeechToTextOverlay"
         "Microsoft.ZuneMusic"
         "Microsoft.ZuneVideo"
-        "MicrosoftTeams"
+        #"MicrosoftTeams"
         "Microsoft.YourPhone"
         "Microsoft.XboxGamingOverlay_5.721.10202.0_neutral_~_8wekyb3d8bbwe"
         "Microsoft.GamingApp"
-        "SpotifyAB.SpotifyMusic"
+        #"SpotifyAB.SpotifyMusic"
         "Disney.37853FC22B2CE"
         "*EclipseManager*"
         "*ActiproSoftwareLLC*"
@@ -185,13 +185,13 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
         "*Flipboard*"
         "*Twitter*"
         "*Facebook*"
-        "*Spotify*"
+        #"*Spotify*"
         "*Minecraft*"
         "*Royal Revolt*"
         "*Sway*"
         "*Speed Test*"
         "*Dolby*"
-        "*Office*"
+        #"*Office*"
         "*Disney*"
         "clipchamp.clipchamp"
         "*gaming*"
@@ -225,7 +225,7 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
         #Remove Background Tasks
         "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\46928bounde.EclipseManager_2.2.4.51_neutral__a5h4egax66k6y"
         "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\ActiproSoftwareLLC.562882FEEB491_2.6.18.18_neutral__24pqs290vpjk0"
-        "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\Microsoft.MicrosoftOfficeHub_17.7909.7600.0_x64__8wekyb3d8bbwe"
+        #"HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\Microsoft.MicrosoftOfficeHub_17.7909.7600.0_x64__8wekyb3d8bbwe"
         "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\Microsoft.PPIProjection_10.0.15063.0_neutral_neutral_cw5n1h2txyewy"
         "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\Microsoft.XboxGameCallableUI_1000.15063.0.0_neutral_neutral_cw5n1h2txyewy"
         "HKCR:\Extensions\ContractId\Windows.BackgroundTasks\PackageId\Microsoft.XboxGameCallableUI_1000.16299.15.0_neutral_neutral_cw5n1h2txyewy"
@@ -241,7 +241,7 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
         "HKCR:\Extensions\ContractId\Windows.Launch\PackageId\Microsoft.XboxGameCallableUI_1000.16299.15.0_neutral_neutral_cw5n1h2txyewy"
             
         #Scheduled Tasks to delete
-        "HKCR:\Extensions\ContractId\Windows.PreInstalledConfigTask\PackageId\Microsoft.MicrosoftOfficeHub_17.7909.7600.0_x64__8wekyb3d8bbwe"
+        #"HKCR:\Extensions\ContractId\Windows.PreInstalledConfigTask\PackageId\Microsoft.MicrosoftOfficeHub_17.7909.7600.0_x64__8wekyb3d8bbwe"
             
         #Windows Protocol Keys
         "HKCR:\Extensions\ContractId\Windows.Protocol\PackageId\ActiproSoftwareLLC.562882FEEB491_2.6.18.18_neutral__24pqs290vpjk0"
@@ -363,17 +363,17 @@ Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
     #}
     
     #Disabling Location Tracking
-    Write-Host "Disabling Location Tracking"
-    $SensorState = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}"
-    $LocationConfig = "HKLM:\SYSTEM\CurrentControlSet\Services\lfsvc\Service\Configuration"
-    If (!(Test-Path $SensorState)) {
-        New-Item $SensorState
-    }
-    Set-ItemProperty $SensorState SensorPermissionState -Value 0 
-    If (!(Test-Path $LocationConfig)) {
-        New-Item $LocationConfig
-    }
-    Set-ItemProperty $LocationConfig Status -Value 0 
+    #Write-Host "Disabling Location Tracking"
+    #$SensorState = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}"
+    #$LocationConfig = "HKLM:\SYSTEM\CurrentControlSet\Services\lfsvc\Service\Configuration"
+    #If (!(Test-Path $SensorState)) {
+    #    New-Item $SensorState
+    #}
+    #Set-ItemProperty $SensorState SensorPermissionState -Value 0 
+    #If (!(Test-Path $LocationConfig)) {
+    #    New-Item $LocationConfig
+    #}
+    #Set-ItemProperty $LocationConfig Status -Value 0 
         
     #Disables People icon on Taskbar
     Write-Host "Disabling People icon on Taskbar"
@@ -812,104 +812,6 @@ write-host "Removing McAfee"
 # Automate Removal and kill services
 start-process "C:\ProgramData\Debloat\Mccleanup.exe" -ArgumentList "-p StopServices,MFSY,PEF,MXD,CSP,Sustainability,MOCP,MFP,APPSTATS,Auth,EMproxy,FWdiver,HW,MAS,MAT,MBK,MCPR,McProxy,McSvcHost,VUL,MHN,MNA,MOBK,MPFP,MPFPCU,MPS,SHRED,MPSCU,MQC,MQCCU,MSAD,MSHR,MSK,MSKCU,MWL,NMC,RedirSvc,VS,REMEDIATION,MSC,YAP,TRUEKEY,LAM,PCB,Symlink,SafeConnect,MGS,WMIRemover,RESIDUE -v -s"
 write-host "McAfee Removal Tool has been run"
-
-}
-
-
-##Look for anything else
-
-##Make sure Intune hasn't installed anything so we don't remove installed apps
-
-$intunepath = "HKLM:\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps"
-$intunecomplete = @(Get-ChildItem $intunepath).count
-if ($intunecomplete -eq 0) {
-
-
-##Apps to ignore - NOTE: Chrome has an unusual uninstall so sort on it's own
-$whitelistapps = @(
-    "Microsoft Update Health Tools"
-    "Microsoft Intune Management Extension"
-    "Microsoft Edge"
-    "Microsoft Edge Update"
-    "Microsoft Edge WebView2 Runtime"
-    "Google Chrome"
-    "Microsoft Teams"
-    "Teams Machine-Wide Installer"
-)
-
-$InstalledSoftware = Get-ChildItem "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
-foreach($obj in $InstalledSoftware){
-     $name = $obj.GetValue('DisplayName')
-     if (($name -notcontains $whitelistapps) -and ($null -ne $obj.GetValue('UninstallString'))) {
-        $uninstallcommand = $obj.GetValue('UninstallString')
-        write-host "Uninstalling $name"
-        if ($uninstallcommand -like "*msiexec*") {
-        $splitcommand = $uninstallcommand.Split("{")
-        $msicode = $splitcommand[1]
-        $uninstallapp = "msiexec.exe /X {$msicode /qn"
-        start-process "cmd.exe" -ArgumentList "/c $uninstallapp"
-        }
-        else {
-        $splitcommand = $uninstallcommand.Split("{")
-        
-        $uninstallapp = "$uninstallcommand /S"
-        start-process "cmd.exe" -ArgumentList "/c $uninstallapp"
-        }
-     }
-
-     }
-
-
-$InstalledSoftware32 = Get-ChildItem "HKLM:\Software\WOW6432NODE\Microsoft\Windows\CurrentVersion\Uninstall"
-foreach($obj32 in $InstalledSoftware32){
-     $name32 = $obj32.GetValue('DisplayName')
-     if (($name32 -notcontains $whitelistapps) -and ($null -ne $obj32.GetValue('UninstallString'))) {
-        $uninstallcommand32 = $obj.GetValue('UninstallString')
-        write-host "Uninstalling $name"
-                if ($uninstallcommand32 -like "*msiexec*") {
-        $splitcommand = $uninstallcommand32.Split("{")
-        $msicode = $splitcommand[1]
-        $uninstallapp = "msiexec.exe /X {$msicode /qn"
-        start-process "cmd.exe" -ArgumentList "/c $uninstallapp"
-        }
-        else {
-        $splitcommand = $uninstallcommand32.Split("{")
-        
-        $uninstallapp = "$uninstallcommand /S"
-        start-process "cmd.exe" -ArgumentList "/c $uninstallapp"
-        }
-    }
-}
-
-##Remove Chrome
-$chrome32path = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome"
-
-if ($null -ne $chrome32path) {
-
-$versions = (Get-ItemProperty -path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome').version
-ForEach ($version in $versions) {
-write-host "Found Chrome version $version"
-$directory = ${env:ProgramFiles(x86)}
-write-host "Removing Chrome"
-Start-Process "$directory\Google\Chrome\Application\$version\Installer\setup.exe" -argumentlist  "--uninstall --multi-install --chrome --system-level --force-uninstall"
-}
-
-}
-
-$chromepath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome"
-
-if ($null -ne $chromepath) {
-
-$versions = (Get-ItemProperty -path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome').version
-ForEach ($version in $versions) {
-write-host "Found Chrome version $version"
-$directory = ${env:ProgramFiles}
-write-host "Removing Chrome"
-Start-Process "$directory\Google\Chrome\Application\$version\Installer\setup.exe" -argumentlist  "--uninstall --multi-install --chrome --system-level --force-uninstall"
-}
-
-
-}
 
 }
 
